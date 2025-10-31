@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 3
+  tags: []
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 1369697947
+    locked: 0
+  - name: Track
+    uniqueID: 3494253429
+    locked: 0
+  - name: Markers
+    uniqueID: 2946012521
+    locked: 0
+  - name: Cars
+    uniqueID: 1197249011
+    locked: 0
+  - name: Effects
+    uniqueID: 3148366849
+    locked: 0
+  - name: UI
+    uniqueID: 920590571
+    locked: 0
+  m_RenderingLayers:
+  - Default
