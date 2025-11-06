@@ -17,11 +17,10 @@ public class CollisionAnalyzer : MonoBehaviour
     private Vector2 velocityBeforeCollision2;
     private bool collisionDetected = false;
     private bool hasRecordedVelocities = false;
-    private bool simulationCompleted = false; // NUEVA: Evitar múltiples análisis
+    private bool simulationCompleted = false;
 
     void FixedUpdate()
     {
-        // SOLUCIÓN: Siempre muestrear velocidades, pero guardarlas solo si no hay colisión en progreso
         if (!collisionDetected && !simulationCompleted)
         {
             velocityBeforeCollision1 = car1.rb.linearVelocity;
@@ -35,12 +34,7 @@ public class CollisionAnalyzer : MonoBehaviour
 
     public void OnCarsCollisionEnter()
     {
-
-        // NUEVO: Debug de materiales
-    Debug.Log($"🔧 MATERIALES - Car1: {car1.GetComponent<Collider2D>().sharedMaterial?.bounciness}, Car2: {car2.GetComponent<Collider2D>().sharedMaterial?.bounciness}");
-        if (collisionDetected || simulationCompleted) return; 
-        
-        // NUEVO: Evitar múltiples análisis
+        if (collisionDetected || simulationCompleted) return;
         
         if (enableDebug) 
             Debug.Log("🎯 COLISIÓN DETECTADA - Iniciando análisis...");
@@ -65,103 +59,77 @@ public class CollisionAnalyzer : MonoBehaviour
         if (enableDebug)
             Debug.Log($"📊 ANTES - Car1: {v1_before:F2}, Car2: {v2_before:F2}");
 
-        // PASO 2: Esperar para que Unity procese la colisión
-        yield return new WaitForSeconds(0.05f);
-        yield return new WaitForFixedUpdate();
-
-        // PASO 3: Medir velocidades DESPUÉS
-        float v1_after = car1.rb.linearVelocity.x;
-        float v2_after = car2.rb.linearVelocity.x;
-
-        if (enableDebug)
-            Debug.Log($"📊 DESPUÉS - Car1: {v1_after:F2}, Car2: {v2_after:F2}");
-
-        // PASO 4: Calcular coeficiente de restitución
-        float denominator = v1_before - v2_before;
+        // PASO 2: CALCULAR COEFICIENTE e MANUALMENTE
+        float e_manual = Mathf.Min(car1.coeficienteElasticidad, car2.coeficienteElasticidad);
         
         if (enableDebug)
-            Debug.Log($"🧮 Denominador: {denominator:F2}");
+            Debug.Log($"🔧 e MANUAL - Car1: {car1.coeficienteElasticidad}, Car2: {car2.coeficienteElasticidad}, e_usado: {e_manual:F3}");
 
-        float e_calculated = 0f;
-        bool e_computed = false;
-
-        if (Mathf.Abs(denominator) > 0.01f) // Evitar división por cero
-        {
-            e_calculated = (v2_after - v1_after) / denominator;
-            e_computed = true;
-            
-            // Asegurar que e esté en rango físico [0, 1]
-            e_calculated = Mathf.Clamp(e_calculated, 0f, 1f);
-            
-            if (enableDebug)
-                Debug.Log($"✅ e CALCULADO: {e_calculated:F3}");
-        }
-        else
-        {
-            Debug.LogWarning("⚠️ Denominador muy pequeño, no se puede calcular e");
-        }
-
-        // PASO 5: Calcular energías
+        // PASO 3: CALCULAR VELOCIDADES FINALES USANDO FÓRMULAS FÍSICAS
         float m1 = car1.rb.mass;
         float m2 = car2.rb.mass;
-        
+        float u1 = v1_before;
+        float u2 = v2_before;
+
+        float v1_final = (m1 * u1 + m2 * u2 - m2 * e_manual * (u1 - u2)) / (m1 + m2);
+        float v2_final = (m1 * u1 + m2 * u2 + m1 * e_manual * (u1 - u2)) / (m1 + m2);
+
+        // PASO 4: APLICAR VELOCIDADES CALCULADAS (SOBREESCRIBIMOS LA FÍSICA DE UNITY)
+        car1.rb.linearVelocity = new Vector2(v1_final, 0);
+        car2.rb.linearVelocity = new Vector2(v2_final, 0);
+
+        if (enableDebug)
+            Debug.Log($"📊 DESPUÉS CALCULADO - Car1: {v1_final:F2}, Car2: {v2_final:F2}");
+
+        // PASO 5: Calcular energías
         float Ek_before = 0.5f * m1 * v1_before * v1_before + 0.5f * m2 * v2_before * v2_before;
-        float Ek_after = 0.5f * m1 * v1_after * v1_after + 0.5f * m2 * v2_after * v2_after;
+        float Ek_after = 0.5f * m1 * v1_final * v1_final + 0.5f * m2 * v2_final * v2_final;
         float percentEnergyConserved = (Ek_before > 0) ? (Ek_after / Ek_before) * 100f : 0f;
 
-        // PASO 6: Determinar tipo de choque
-        string collisionType = DetermineCollisionType(e_computed ? e_calculated : -1f, percentEnergyConserved);
+        // PASO 6: Determinar tipo de choque (usamos e_manual)
+        string collisionType = DetermineCollisionType(e_manual, percentEnergyConserved);
 
         // PASO 7: Notificar al SimulationManager
         if (simulationManager != null)
         {
             simulationManager.OnCollisionResults(
-                v1_before, v2_before, v1_after, v2_after,
-                e_calculated,
+                v1_before, v2_before, v1_final, v2_final,
+                e_manual, // Usamos el e MANUAL, no el calculado de Unity
                 Ek_before, Ek_after,
-                m1 * v1_before + m2 * v2_before, // momentum before
-                m1 * v1_after + m2 * v2_after,   // momentum after  
+                m1 * v1_before + m2 * v2_before,
+                m1 * v1_final + m2 * v2_final,
                 percentEnergyConserved,
                 collisionType
             );
         }
 
-        // NUEVO: Detener los carros después del análisis para evitar múltiples choques
-        yield return new WaitForSeconds(0.5f);
+        // PASO 8: Detener simulación después de un tiempo
+        yield return new WaitForSeconds(1.0f);
         car1.rb.linearVelocity = Vector2.zero;
         car2.rb.linearVelocity = Vector2.zero;
 
         // Resetear para próxima simulación
         collisionDetected = false;
         hasRecordedVelocities = false;
-        simulationCompleted = true; // NUEVO: Marcar simulación como completada
+        simulationCompleted = true;
     }
 
     private string DetermineCollisionType(float e, float energyConserved)
     {
-        if (e < 0) // No se pudo calcular e
-        {
-            if (energyConserved >= 95f) return "ELÁSTICO";
-            if (energyConserved >= 50f) return "INELÁSTICO";
-            return "PERFECTAMENTE INELÁSTICO";
-        }
-
-        // Usar e para clasificación
         if (e >= 0.95f) return "ELÁSTICO";
-        if (e >= 0.5f) return "PARCIALMENTE ELÁSTICO";
-        if (e > 0.1f) return "INELÁSTICO";
+        if (e >= 0.7f) return "PARCIALMENTE ELÁSTICO";
+        if (e >= 0.3f) return "INELÁSTICO";
+        if (e > 0.0f) return "MUY INELÁSTICO";
         return "PERFECTAMENTE INELÁSTICO";
     }
 
-    // Llamar este método al iniciar/resetear simulación
     public void StartSimulation()
     {
         collisionDetected = false;
         hasRecordedVelocities = false;
-        simulationCompleted = false; // NUEVO: Permitir nueva simulación
+        simulationCompleted = false;
     }
 }
-
 
 
 

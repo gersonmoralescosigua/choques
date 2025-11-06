@@ -17,6 +17,11 @@ public class CarController : MonoBehaviour
     [Tooltip("Dirección inicial: true = hacia la derecha (+X). false = hacia la izquierda (-X).")]
     public bool initialDirectionRight = true;
 
+    [Header("Propiedades Elásticas - MANUAL")]
+    [Tooltip("Coeficiente de elasticidad individual (0 = perfectamente inelástico, 1 = perfectamente elástico)")]
+    [Range(0f, 1f)]
+    public float coeficienteElasticidad = 0.9f;
+
     [Header("Opcionales (solo lectura en Play)")]
     [Tooltip("Posición inicial (guardada en Awake) para poder reiniciar la escena.")]
     public Vector3 initialPosition;
