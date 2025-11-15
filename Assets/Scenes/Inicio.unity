@@ -293,8 +293,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1263075579}
-        m_TargetAssemblyTypeName: salir, Assembly-CSharp
-        m_MethodName: RegresarAInicio
+        m_TargetAssemblyTypeName: portada, Assembly-CSharp
+        m_MethodName: IrAPortada
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -351,9 +351,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1263075574}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27376d294b6d4f04fbd7690fba8fb76a, type: 3}
+  m_Script: {fileID: 11500000, guid: 4b952c298bcacc04880b0db2a1267026, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::salir
+  m_EditorClassIdentifier: Assembly-CSharp::portada
 --- !u!1 &1314134475
 GameObject:
   m_ObjectHideFlags: 0
