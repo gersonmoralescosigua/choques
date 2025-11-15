@@ -2964,11 +2964,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1425503379409601311, guid: 4d6f04a27fe187748955bd584cbe3d0d, type: 3}
       propertyPath: m_Size.x
-      value: 7.162772
+      value: 8.815915
       objectReference: {fileID: 0}
     - target: {fileID: 1425503379409601311, guid: 4d6f04a27fe187748955bd584cbe3d0d, type: 3}
       propertyPath: m_Size.y
-      value: 2.8285308
+      value: 4.7217264
       objectReference: {fileID: 0}
     - target: {fileID: 1425503379409601311, guid: 4d6f04a27fe187748955bd584cbe3d0d, type: 3}
       propertyPath: m_Material
@@ -2976,24 +2976,28 @@ PrefabInstance:
       objectReference: {fileID: 6200000, guid: ba411aac95bac1d45b0f560a642804f3, type: 2}
     - target: {fileID: 1425503379409601311, guid: 4d6f04a27fe187748955bd584cbe3d0d, type: 3}
       propertyPath: m_Offset.x
-      value: -0.31581783
+      value: 0.51075315
       objectReference: {fileID: 0}
     - target: {fileID: 1425503379409601311, guid: 4d6f04a27fe187748955bd584cbe3d0d, type: 3}
       propertyPath: m_Offset.y
-      value: 0.08641958
+      value: 0.030738235
       objectReference: {fileID: 0}
     - target: {fileID: 1425503379409601311, guid: 4d6f04a27fe187748955bd584cbe3d0d, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 6.91
+      value: 9.08
       objectReference: {fileID: 0}
     - target: {fileID: 1425503379409601311, guid: 4d6f04a27fe187748955bd584cbe3d0d, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 2.57
+      value: 4.76
       objectReference: {fileID: 0}
     - target: {fileID: 2192250447853170711, guid: 4d6f04a27fe187748955bd584cbe3d0d, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 1598543105571004906, guid: 212062f59c73859469bbf3dfeaa9c99d, type: 3}
+      objectReference: {fileID: 3857696166697491488, guid: 708b2dcfc75d81041b1e060df139da9a, type: 3}
+    - target: {fileID: 2192250447853170711, guid: 4d6f04a27fe187748955bd584cbe3d0d, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 2793574752121889704, guid: 4d6f04a27fe187748955bd584cbe3d0d, type: 3}
       propertyPath: m_GravityScale
       value: 0
@@ -3012,19 +3016,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8414596242817989265, guid: 4d6f04a27fe187748955bd584cbe3d0d, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.32064304
+      value: 0.30230224
       objectReference: {fileID: 0}
     - target: {fileID: 8414596242817989265, guid: 4d6f04a27fe187748955bd584cbe3d0d, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.46144742
+      value: 0.37395933
       objectReference: {fileID: 0}
     - target: {fileID: 8414596242817989265, guid: 4d6f04a27fe187748955bd584cbe3d0d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -9.0646
+      value: -9.3933
       objectReference: {fileID: 0}
     - target: {fileID: 8414596242817989265, guid: 4d6f04a27fe187748955bd584cbe3d0d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.3084
+      value: -4.1
       objectReference: {fileID: 0}
     - target: {fileID: 8414596242817989265, guid: 4d6f04a27fe187748955bd584cbe3d0d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3112,6 +3116,7 @@ MonoBehaviour:
   mass: 3
   initialVelocityMagnitude: 5
   initialDirectionRight: 1
+  coeficienteElasticidad: 0.2
   initialPosition: {x: 0, y: 0, z: 0}
   rb: {fileID: 1252581715}
 --- !u!1 &1265334215
@@ -3204,11 +3209,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8414596242817989265, guid: 4d6f04a27fe187748955bd584cbe3d0d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.5661
+      value: 3.81
       objectReference: {fileID: 0}
     - target: {fileID: 8414596242817989265, guid: 4d6f04a27fe187748955bd584cbe3d0d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.3892
+      value: -4.26
       objectReference: {fileID: 0}
     - target: {fileID: 8414596242817989265, guid: 4d6f04a27fe187748955bd584cbe3d0d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3283,6 +3288,7 @@ MonoBehaviour:
   mass: 3
   initialVelocityMagnitude: 5
   initialDirectionRight: 0
+  coeficienteElasticidad: 0.9
   initialPosition: {x: 0, y: 0, z: 0}
   rb: {fileID: 1278271683}
 --- !u!114 &1278271687

@@ -442,6 +442,7 @@ MonoBehaviour:
   mass: 3
   initialVelocityMagnitude: 5
   initialDirectionRight: 1
+  coeficienteElasticidad: 0.6
   initialPosition: {x: 0, y: 0, z: 0}
   rb: {fileID: 103448926}
 --- !u!114 &103448930
@@ -3013,6 +3014,7 @@ MonoBehaviour:
   mass: 3
   initialVelocityMagnitude: 5
   initialDirectionRight: 0
+  coeficienteElasticidad: 0.9
   initialPosition: {x: 0, y: 0, z: 0}
   rb: {fileID: 1266324538}
 --- !u!114 &1266324543
@@ -4308,11 +4310,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8414596242817989265, guid: 4d6f04a27fe187748955bd584cbe3d0d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.52
+      value: -6.52
       objectReference: {fileID: 0}
     - target: {fileID: 8414596242817989265, guid: 4d6f04a27fe187748955bd584cbe3d0d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.87
+      value: -3.79
       objectReference: {fileID: 0}
     - target: {fileID: 8414596242817989265, guid: 4d6f04a27fe187748955bd584cbe3d0d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5498,11 +5500,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8414596242817989265, guid: 4d6f04a27fe187748955bd584cbe3d0d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.39
+      value: 8.6
       objectReference: {fileID: 0}
     - target: {fileID: 8414596242817989265, guid: 4d6f04a27fe187748955bd584cbe3d0d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.95
+      value: -3.99
       objectReference: {fileID: 0}
     - target: {fileID: 8414596242817989265, guid: 4d6f04a27fe187748955bd584cbe3d0d, type: 3}
       propertyPath: m_LocalPosition.z

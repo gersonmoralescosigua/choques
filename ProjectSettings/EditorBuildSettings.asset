@@ -8,6 +8,33 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/deportivovspickup.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
+  - enabled: 1
+    path: Assets/Scenes/Portada.unity
+    guid: 45606624f3156084c8a91c5eb0f2f68f
+  - enabled: 1
+    path: Assets/Scenes/camionvscamion.unity
+    guid: aa283c36fb62fac4aaaf4ad977e98662
+  - enabled: 1
+    path: Assets/Scenes/camionvspickup.unity
+    guid: 222d6c3f6472e28468bbfad6883f2bb1
+  - enabled: 1
+    path: Assets/Scenes/Creditos.unity
+    guid: 82cf2402ea853a24b9baab4c51e33766
+  - enabled: 1
+    path: Assets/Scenes/pickupvspickup.unity
+    guid: 62be02fb46f3ec7459a7616817501836
+  - enabled: 1
+    path: Assets/Scenes/deportivovsdeportivo.unity
+    guid: 6718a927e98a44744aeb618c17f247bb
+  - enabled: 1
+    path: Assets/Scenes/Inicio.unity
+    guid: e89a1f95eb761214ab418cb81bf5cc6c
+  - enabled: 1
+    path: Assets/Scenes/Instruciones.unity
+    guid: 9acd43bc77df3cf4f8a3448208d954d6
+  - enabled: 1
+    path: Assets/Scenes/deportivovscamion.unity
+    guid: 31ef1ccede4a5ed4aa92e46b028d1dc4
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
