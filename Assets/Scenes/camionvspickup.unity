@@ -292,8 +292,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 841, y: 455.73}
-  m_SizeDelta: {x: 157.23, y: 60.297}
+  m_AnchoredPosition: {x: 829.7947, y: 447.5702}
+  m_SizeDelta: {x: 179.6408, y: 76.617}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &111029113
 MonoBehaviour:
@@ -371,8 +371,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 8833482733760635664, guid: 185228a3c76887245911ed0331f2afcb, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -732,19 +732,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8414596242817989265, guid: 4d6f04a27fe187748955bd584cbe3d0d, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.32064304
+      value: 0.39358932
       objectReference: {fileID: 0}
     - target: {fileID: 8414596242817989265, guid: 4d6f04a27fe187748955bd584cbe3d0d, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.46144742
+      value: 0.5529986
       objectReference: {fileID: 0}
     - target: {fileID: 8414596242817989265, guid: 4d6f04a27fe187748955bd584cbe3d0d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -10.31
+      value: -10.0579
       objectReference: {fileID: 0}
     - target: {fileID: 8414596242817989265, guid: 4d6f04a27fe187748955bd584cbe3d0d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.18
+      value: -4.0624
       objectReference: {fileID: 0}
     - target: {fileID: 8414596242817989265, guid: 4d6f04a27fe187748955bd584cbe3d0d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3412,6 +3412,10 @@ PrefabInstance:
     - target: {fileID: 2793574752121889704, guid: 4d6f04a27fe187748955bd584cbe3d0d, type: 3}
       propertyPath: m_GravityScale
       value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6383121055623662443, guid: 4d6f04a27fe187748955bd584cbe3d0d, type: 3}
+      propertyPath: initialDirectionRight
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8414596242817989265, guid: 4d6f04a27fe187748955bd584cbe3d0d, type: 3}
       propertyPath: m_LocalScale.x

@@ -914,7 +914,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CollisionAnalyzer
   car1: {fileID: 302995519}
-  car2: {fileID: 0}
+  car2: {fileID: 1080017182}
   simulationManager: {fileID: 1690024098}
   enableDebug: 1
 --- !u!4 &228213840
@@ -1329,19 +1329,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8414596242817989265, guid: 4d6f04a27fe187748955bd584cbe3d0d, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.32064304
+      value: 0.31920016
       objectReference: {fileID: 0}
     - target: {fileID: 8414596242817989265, guid: 4d6f04a27fe187748955bd584cbe3d0d, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.46144742
+      value: 0.43385285
       objectReference: {fileID: 0}
     - target: {fileID: 8414596242817989265, guid: 4d6f04a27fe187748955bd584cbe3d0d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -10.61
+      value: -10.6181
       objectReference: {fileID: 0}
     - target: {fileID: 8414596242817989265, guid: 4d6f04a27fe187748955bd584cbe3d0d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.3084
+      value: -3.765
       objectReference: {fileID: 0}
     - target: {fileID: 8414596242817989265, guid: 4d6f04a27fe187748955bd584cbe3d0d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2701,8 +2701,8 @@ Transform:
   m_GameObject: {fileID: 913088892}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.7748, y: -0.4525, z: 0}
-  m_LocalScale: {x: 0.97181284, y: 1.0097446, z: 1}
+  m_LocalPosition: {x: -1.8284, y: -0.1319, z: 0}
+  m_LocalScale: {x: 0.9674397, y: 0.94936186, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -3477,21 +3477,25 @@ PrefabInstance:
       propertyPath: m_CollisionDetection
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6383121055623662443, guid: 4d6f04a27fe187748955bd584cbe3d0d, type: 3}
+      propertyPath: initialDirectionRight
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8414596242817989265, guid: 4d6f04a27fe187748955bd584cbe3d0d, type: 3}
       propertyPath: m_LocalScale.x
-      value: -0.32421654
+      value: -0.32275757
       objectReference: {fileID: 0}
     - target: {fileID: 8414596242817989265, guid: 4d6f04a27fe187748955bd584cbe3d0d, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.49387303
+      value: 0.4643394
       objectReference: {fileID: 0}
     - target: {fileID: 8414596242817989265, guid: 4d6f04a27fe187748955bd584cbe3d0d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.08
+      value: 4.0062
       objectReference: {fileID: 0}
     - target: {fileID: 8414596242817989265, guid: 4d6f04a27fe187748955bd584cbe3d0d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.4249
+      value: -3.8746
       objectReference: {fileID: 0}
     - target: {fileID: 8414596242817989265, guid: 4d6f04a27fe187748955bd584cbe3d0d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3578,10 +3582,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CarController
   mass: 3
   initialVelocityMagnitude: 5
-  initialDirectionRight: 1
+  initialDirectionRight: 0
   coeficienteElasticidad: 0.6
   initialPosition: {x: 0, y: 0, z: 0}
   rb: {fileID: 1080017179}
+--- !u!114 &1080017182 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6383121055623662443, guid: 4d6f04a27fe187748955bd584cbe3d0d, type: 3}
+  m_PrefabInstance: {fileID: 1080017176}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1080017178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcf3832d3237436468184d7543042b19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CarController
 --- !u!1 &1194437126
 GameObject:
   m_ObjectHideFlags: 0
@@ -3718,8 +3733,8 @@ Transform:
   m_GameObject: {fileID: 1289881859}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.6701, y: -0.5142, z: 0}
-  m_LocalScale: {x: 1.0725443, y: 1.7850069, z: 1}
+  m_LocalPosition: {x: -4.7108, y: -0.1899, z: 0}
+  m_LocalScale: {x: 1.0677179, y: 1.6782634, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -4940,7 +4955,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SimulationManager
   car1: {fileID: 302995519}
-  car2: {fileID: 0}
+  car2: {fileID: 1080017182}
   inputCar1Mass: {fileID: 262553751}
   inputCar1Velocity: {fileID: 74132397}
   inputCar2Mass: {fileID: 1617924262}
@@ -5572,8 +5587,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 8833482733760635664, guid: 185228a3c76887245911ed0331f2afcb, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -5617,8 +5632,8 @@ Transform:
   m_GameObject: {fileID: 2100685434}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.29, y: -0.71, z: 0}
-  m_LocalScale: {x: 1.2492, y: 9.9707, z: 1}
+  m_LocalPosition: {x: 6.2063, y: -0.3817, z: 0}
+  m_LocalScale: {x: 1.2435787, y: 9.374452, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 871741188}
@@ -5858,8 +5873,8 @@ Transform:
   m_GameObject: {fileID: 2110866468}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.7097, y: -0.402, z: -10}
-  m_LocalScale: {x: 0.97181284, y: 1.0097446, z: 1}
+  m_LocalPosition: {x: -4.7502, y: -0.0844, z: -10}
+  m_LocalScale: {x: 0.9674397, y: 0.94936186, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}

@@ -1786,6 +1786,10 @@ PrefabInstance:
       propertyPath: m_CollisionDetection
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6383121055623662443, guid: 4d6f04a27fe187748955bd584cbe3d0d, type: 3}
+      propertyPath: initialDirectionRight
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8414596242817989265, guid: 4d6f04a27fe187748955bd584cbe3d0d, type: 3}
       propertyPath: m_LocalScale.x
       value: -0.32605955
@@ -2598,7 +2602,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CollisionAnalyzer
   car1: {fileID: 204219807}
-  car2: {fileID: 0}
+  car2: {fileID: 1715938527}
   simulationManager: {fileID: 1515731955}
   enableDebug: 1
 --- !u!4 &743179322
@@ -3981,7 +3985,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1473133690}
   m_LocalRotation: {x: -0, y: 0.007303089, z: -0, w: 0.9999734}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0.2728}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3990,8 +3994,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0.837, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 805.381, y: 440.69}
-  m_SizeDelta: {x: 166.764, y: 43.765}
+  m_AnchoredPosition: {x: 824.05664, y: 443}
+  m_SizeDelta: {x: 204.1195, y: 69.9111}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1473133692
 MonoBehaviour:
@@ -4081,8 +4085,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 8833482733760635664, guid: 185228a3c76887245911ed0331f2afcb, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -4262,7 +4266,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SimulationManager
   car1: {fileID: 204219807}
-  car2: {fileID: 0}
+  car2: {fileID: 1715938527}
   inputCar1Mass: {fileID: 862981482}
   inputCar1Velocity: {fileID: 2095775765}
   inputCar2Mass: {fileID: 647902886}
@@ -5121,6 +5125,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1707652171}
   m_CullTransparentMesh: 1
+--- !u!114 &1715938527 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6383121055623662443, guid: 4d6f04a27fe187748955bd584cbe3d0d, type: 3}
+  m_PrefabInstance: {fileID: 447561600}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 447561602}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcf3832d3237436468184d7543042b19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CarController
 --- !u!1 &1820243664
 GameObject:
   m_ObjectHideFlags: 0
