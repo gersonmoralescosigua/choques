@@ -1,11 +1,10 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class simulacion : MonoBehaviour
+public class regresar : MonoBehaviour
 {
-    public void IrASimulacion()
+    public void IrASelect()
     {
         SceneManager.LoadScene("select");
     }
 }
-

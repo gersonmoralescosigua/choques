@@ -267,9 +267,9 @@ GameObject:
   - component: {fileID: 111029115}
   - component: {fileID: 111029114}
   - component: {fileID: 111029113}
-  - component: {fileID: 111029112}
+  - component: {fileID: 111029116}
   m_Layer: 5
-  m_Name: salir
+  m_Name: regresarmenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -295,18 +295,6 @@ RectTransform:
   m_AnchoredPosition: {x: 841, y: 455.73}
   m_SizeDelta: {x: 157.23, y: 60.297}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &111029112
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 111029110}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27376d294b6d4f04fbd7690fba8fb76a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::salir
 --- !u!114 &111029113
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -351,9 +339,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 111029112}
-        m_TargetAssemblyTypeName: salir, Assembly-CSharp
-        m_MethodName: RegresarAInicio
+      - m_Target: {fileID: 111029116}
+        m_TargetAssemblyTypeName: regresar, Assembly-CSharp
+        m_MethodName: IrASelect
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -401,6 +389,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 111029110}
   m_CullTransparentMesh: 1
+--- !u!114 &111029116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 111029110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9322ce4b926420641a2f7b7b590491d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::regresar
 --- !u!1 &171133555
 GameObject:
   m_ObjectHideFlags: 0
