@@ -29,9 +29,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Inicio.unity
     guid: e89a1f95eb761214ab418cb81bf5cc6c
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Instruciones.unity
     guid: 9acd43bc77df3cf4f8a3448208d954d6
+  - enabled: 1
+    path: Assets/Scenes/Instrucciones.unity
+    guid: 1737b35b745f2124780a6b165817e3d7
   - enabled: 1
     path: Assets/Scenes/deportivovscamion.unity
     guid: 31ef1ccede4a5ed4aa92e46b028d1dc4
