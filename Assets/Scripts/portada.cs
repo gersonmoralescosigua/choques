@@ -1,10 +1,11 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class portada : MonoBehaviour
 {
-    public void IrAPortada()
+    public void SalirDelJuego()
     {
-        SceneManager.LoadScene("Portada");
+        Application.Quit();
+        Debug.Log("El juego se cerraría aquí (solo funciona en build).");
     }
 }
+
